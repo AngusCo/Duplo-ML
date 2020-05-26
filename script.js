@@ -26,6 +26,7 @@ function encodeImageFileAsURL(element) {
             url: 'https://automl.googleapis.com/v1/projects/923293844511/locations/us-central1/models/IOD5545052643153412096:predict',
             contentType: 'application/json',
             data: imgData,
+            //header: {'Authorization': }
             success: function (msg) {
                 console.log(msg);
             },
@@ -51,4 +52,8 @@ function onSignIn(googleUser) {
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
+
+    gapi.load('auth2', function () {
+        console.log('test');
+    });
 }
