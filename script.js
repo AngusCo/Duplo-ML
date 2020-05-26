@@ -53,7 +53,5 @@ function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
 
-    gapi.load('auth2', function () {
-        console.log('test');
-    });
+
 }
