@@ -26,7 +26,7 @@ function encodeImageFileAsURL(element) {
             url: 'https://automl.googleapis.com/v1/projects/923293844511/locations/us-central1/models/IOD5545052643153412096:predict',
             contentType: 'application/json; charset=utf-8',
             data: imgData,
-            headers: {'Authorization': 'Bearer $(gcloud auth application-default print-access-token)'},
+            headers: {'Authorization: Bearer $(gcloud auth application-default print-access-token)'},
             success: function (msg) {
                 console.log(msg);
             },
